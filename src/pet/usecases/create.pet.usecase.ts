@@ -24,7 +24,7 @@ export default class CreatePetUseCase implements IUseCase<CreatePetUseCaseInput,
             bio: newPet.bio,
             photo: newPet.photo,
             createdAt: newPet.createdAt,
-            updateAt: newPet.updatedAt
+            updatedAt: newPet.updatedAt
         })
     }
 

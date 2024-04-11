@@ -7,7 +7,7 @@ export default class CreatePetUseCaseOutput{
     bio: string;
     photo: string;
     createdAt: Date;
-    updateAt: Date;
+    updatedAt: Date;
 
     constructor(data: Partial<CreatePetUseCaseOutput>) {
         Object.assign(this, data);
