@@ -18,6 +18,7 @@ import UpdatePetPhotoByIdUseCaseInput from './usecases/dtos/update.pet.photo.by.
 import UpdatePetPhotoByIdUseCaseOutput from './usecases/dtos/update.pet.photo.by.id.usecase.output';
 import GetPetsUseCaseInput from './usecases/dtos/get.pets.usecase.input';
 import { symlink } from 'fs';
+import GetPetsUseCaseOutput from './usecases/dtos/get.pets.usecase.output';
 
 @Controller('pet')
 export class PetController {
@@ -39,6 +40,9 @@ export class PetController {
     
     @Inject(PetTokens.deletePetByIdUseCase)
     private readonly deletePetByIdUseCase: IUseCase<DeletePetByIdUseCaseInput, DeletePetByIdUseCaseOutput>
+
+    @Inject(PetTokens.getPetsUseCase)
+    private readonly getPetsUseCase: IUseCase<GetPetsUseCaseInput, GetPetsUseCaseOutput>
     
     
     @Post()
@@ -64,6 +68,7 @@ export class PetController {
             page: !!page ? parseInt(page) : FIRST_PAGE,
             itemsPerPage: !!itemsPerPage ? parseInt(itemsPerPage) : DEFAULT_ITENS_PER_PAGE
         })
+        return await this.getPetsUseCase.run(useCaseInput)
     }
 
     @Get(':id')

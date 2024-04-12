@@ -1,11 +1,11 @@
 import PetResponse from "src/pet/dtos/pet.response";
 
-export default class GetPetByIdUseCaseOutput{
+export default class GetPetsUseCaseOutput{
     currentPage: number;
     totalPages: number;
     items: PetResponse[];
 
-    constructor(data: Partial<GetPetByIdUseCaseOutput>){
+    constructor(data: Partial<GetPetsUseCaseOutput>){
         Object.assign(this, data);
     }
 }
