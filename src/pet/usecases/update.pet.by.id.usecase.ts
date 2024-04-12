@@ -37,6 +37,7 @@ export default class UpdatePetByIdUseCase implements IUseCase<UpdatePetByIdUseCa
             size: pet.size,
             gender: pet.gender,
             bio: pet.bio,
+            photo: pet.photo,
             createdAt: pet.createdAt,
             updatedAt: pet.updatedAt,
         });
