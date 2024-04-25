@@ -7,7 +7,7 @@ export default class UpdateShelterControllerInput {
     @IsString()
     @Length(10,11)
     @IsNotEmpty()
-    whatsapp: string
+    whatsApp: string
     @IsString()
     @IsNumberString()
     @IsNotEmpty()

@@ -6,7 +6,6 @@ import CreatePetUseCaseInput from './usecases/dtos/create.pet.usecase.input';
 import PetTokens from './pet.tokens';
 import GetPetByIdUseCaseInput from './usecases/dtos/get.pet.by.usecase.input';
 import GetPetByIdUseCaseOutput from './usecases/dtos/get.pet.by.id.usecase.output';
-import { json } from 'stream/consumers';
 import UpdatePetByIdUseCaseInput from './usecases/dtos/update.pet.by.id.usecase.input';
 import UpdatePetByIdUseCaseOutput from './usecases/dtos/update.pet.by.id.usecase.output';
 import UpdatePetControllerInput from './dtos/update.pet.controller.input';
@@ -17,7 +16,6 @@ import multerConfig from 'src/config/multer.config';
 import UpdatePetPhotoByIdUseCaseInput from './usecases/dtos/update.pet.photo.by.id.usecase.input';
 import UpdatePetPhotoByIdUseCaseOutput from './usecases/dtos/update.pet.photo.by.id.usecase.output';
 import GetPetsUseCaseInput from './usecases/dtos/get.pets.usecase.input';
-import { symlink } from 'fs';
 import GetPetsUseCaseOutput from './usecases/dtos/get.pets.usecase.output';
 
 @Controller('pet')
